@@ -1,11 +1,13 @@
 let movieId=window.location.href.split('?id=')[1];
 let movieCard=document.getElementById('movieCard')
+let movieName=document.getElementById("movie-name");    
 
 fetch(`https://www.omdbapi.com/?apikey=882c299e&i=${movieId}`)
     .then(response => response.json())
     .then(movie => {
             document.querySelector('title').textContent = movie.Title;
-            console.log(movie)
+            // console.log(movie)
+            movieName.innerHTML=`| ${movie.Title}`
             movieCard.innerHTML=
             `
             <img src="${movie.Poster}" alt="${movie.Title} Poster">
