@@ -1,5 +1,3 @@
-const apiKey = 'http://www.omdbapi.com/?i=tt3896198&apikey=882c299e'; 
-
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 
@@ -17,7 +15,7 @@ function searchMovies() {
         return;
     }
     emptySearch.style.display='none';
-    fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=882c299e&s=${searchTerm}`)
+    fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=882c299e&s=${searchTerm}`)
         .then(response => response.json())
         .then(data => {
             if (data.Search) {
