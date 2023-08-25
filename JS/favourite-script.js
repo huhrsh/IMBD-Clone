@@ -9,7 +9,7 @@ function displayFavoriteMovies() {
     }
     favoriteMoviesContainer.innerHTML=``;
     favorites.forEach(movieId => {
-        fetch(`http://www.omdbapi.com/?apikey=882c299e&i=${movieId}`)
+        fetch(`https://www.omdbapi.com/?apikey=882c299e&i=${movieId}`)
             .then(response => response.json())
             .then(movie => {
                 const movieCard = createFavoriteMovieCard(movie);
