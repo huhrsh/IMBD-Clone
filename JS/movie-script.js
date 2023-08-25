@@ -1,7 +1,7 @@
 let movieId=window.location.href.split('?id=')[1];
 let movieCard=document.getElementById('movieCard')
 
-fetch(`http://www.omdbapi.com/?apikey=882c299e&i=${movieId}`)
+fetch(`https://www.omdbapi.com/?apikey=882c299e&i=${movieId}`)
     .then(response => response.json())
     .then(movie => {
             document.querySelector('title').textContent = movie.Title;
